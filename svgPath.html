@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <title>Let's Start
+    </title>
+    <style>
+      :root{
+        --s:77%;
+        --l:70%;
+        --h:340
+      }
+      body{
+        background:#f1f6ff;
+        margin:1rem;
+        text-align:center;
+        font-family:sans-serif;
+      }
+      svg{
+        background:hsl(var(--h), var(--s), var(--l));
+        box-shadow:20px 20px 20px #0002;
+        width:50%;
+        border-left: 20px inset #c1a5a9;
+        border-right: 20px outset #c1a5a9;
+        border-radius: 10px;
+        transition: all 2s;
+        
+      }
+      #edge{
+          fill:#9a4c95;
+          animation: move 3s infinite ease-in-out;
+          transform-origin: center;
+      }
+      #iming{
+        fill: url("https://i.imgur.com/Z6Wfuzh.jpg");
+      }
+
+      svg:hover{
+        transform: scale(0.9);
+        box-shadow: #f08cae 10px 20px 100px;
+        transition: all 1s;
+      }
+      
+      @keyframes move{
+          0%  {fill:#4d2d52 ;
+          transform: rotate(0deg);
+            }
+          25%{fill: #9a4c95;
+          transform: rotate(180deg);}
+          50%{fill: url("#img1");
+          background-color: #9a4c95;}
+          75%{fill: #9a4c95;}
+          100%{fill: #4d2d52;
+          transform: rotate(360deg);}
+      }
+
+      
+    </style>
+  </head>
+  
+ 
+  <body>
+    <svg viewBox="0 0 100 100">
+      <circle r="0.5" fill="red" cx="50" cy="50"/>
+<!--       <path fill="#ff08" stroke="#fff8" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            d="M50,50 v10 h10 v10 h10 v10 h10 v10 h10
+               v-20 h-10 v-10 h-10 v-10 h-10 v-10 h-40
+               l50,60 h30
+               "/> -->
+      <path  d="M50,10 
+               v20 h30
+               v20 h-30
+               v-20 h-30
+               v-20 h30
+               " 
+            stroke-width="2"
+            stroke="#1d1a31"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="#0000"
+            />
+      <path  d="M20,50 
+               v20 h60
+               v20 h-30
+               v-20 h-30
+               v-20 h30
+               " 
+            stroke-width="2"
+            stroke="#1d1a31"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="#0000"
+            />
+      
+      <defs>  
+  <pattern id="img1" patternUnits="userSpaceOnUse" width="10" height="10">
+    <image href="https://i.imgur.com/Z6Wfuzh.jpg" x="1" y="1" width="10" height="10" />
+  </pattern>
+    </defs>
+
+    <defs>  
+      <pattern id="bg1" patternUnits="userSpaceOnUse" width="10" height="10">
+        <path d="M20,50
+                l30,4"
+                stroke="black"
+                fill="#0000"></path>
+      </pattern>
+        </defs>
+
+      <path d="M20,20 
+               h10 v15 h-5 v-5 h15 v30 
+               v10 h-15 v-5 h5 v15 h-30
+               h-10 v-15 h5 v5 h-15 v-30
+               v-10 h15 v5 h-5 v-15 h30
+               " 
+            stroke-width="2"
+            stroke="#1d1a31"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="#0000"
+            />
+        <path d="M80,80 
+            h-10 v-15 h5 v5 h-15 v-30 
+            v-10 h15 v5 h-5 v-15 h30
+            h10 v15 h-5 v-5 h15 v30
+            v10 h-15 v-5 h5 v15 h-30
+            " 
+         stroke-width="2"
+         stroke="#1d1a31"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="#0000"
+         />
+      <path id="edge" d="M20,50 
+               l30,-30
+               l30,30
+               l-30,30
+               l-30,-30
+               " 
+            stroke-width="2"
+            stroke="#4d2d52"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="#0000"
+            />
+      <path d="M10,5
+            v90 h80 v-10 h-10 v10 h10 v-90
+            h-80 v10 h10 v-10"
+            stroke-width="2"
+            stroke="#1d1a31"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="#0000"></path>
+    </svg>
+    <script src="jsf.js">
+    </script>
+    <h1>Ing the Oracle</h1>
+    <h1>ทำนายชีวิตมหาลัยเพียงใส่รหัสนักศึกษา</h1>
+     <input type="range" min="0" max="360" step="1" value="75" onchange="change(this.value)" /><br>
+     <br><label for="stdId">ID:</label>
+     <input id="input">
+     <br><br><output id="outputtxt"></output>
+     <br><br><button id="submit" onclick="fire()">ทำนาย</button>
+  </body>
+</html>
